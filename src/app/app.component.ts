@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  hidden: boolean = true;
+
+  fetchData() {
+    this.hidden = false;
+
+    setTimeout(() => {
+      alert('Fetching Data...');
+      this.hidden = true;
+    }, 3000);
+  }
 }
